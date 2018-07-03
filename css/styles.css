@@ -54,6 +54,9 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 nav h1 {
   margin: auto;
@@ -65,14 +68,23 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
+
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+
 }
+
+@media all and (min-width: 700px) {
+  #breadcrumb {
+
+      width: calc(50% - 80px);
+  }
+  }
 
 /* Display list items side by side */
 #breadcrumb li {
@@ -97,6 +109,7 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -190,6 +203,8 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
+
+@media all and (min-width: 700px) {
 .inside header {
   position: fixed;
   top: 0;
@@ -213,6 +228,7 @@ nav h1 a {
   bottom: 0;
   position: absolute;
   width: 50%;
+}
 }
 #restaurant-name {
   color: #f18200;
