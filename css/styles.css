@@ -79,7 +79,7 @@ nav h1 a {
 
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
   #breadcrumb {
 
       width: calc(50% - 80px);
@@ -204,7 +204,7 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
 .inside header {
   position: fixed;
   top: 0;
