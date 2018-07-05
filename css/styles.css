@@ -273,7 +273,7 @@ nav h1 a {
   .inside #footer {
     bottom: 0;
     position: absolute;
-    width: 50%;
+    width: 44%;
   }
 }
 
@@ -348,7 +348,7 @@ nav h1 a {
   padding-bottom: 1pt;
 }
 
-@media all and (min-width: 800px) {
+/* @media all and (min-width: 800px) {
   #reviews-list {
     margin: 0;
     padding: 0;
@@ -356,10 +356,10 @@ nav h1 a {
   #reviews-list li {
     list-style-type: none;
     padding: 0 20px 20px;
-    background-color: #333;
     width: 85%;
   }
-}
+} */
+
 
 #reviews-list li {
   background-color: #fff;
@@ -370,12 +370,44 @@ nav h1 a {
   position: relative;
 }
 
-@media all and (max-width: 799px) {
+/* @media all and (max-width: 799px) { */
   #reviews-list {
     padding: 0;
     list-style-type: none;
   }
-}
+  .reviews-list-headline {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0 25px;
+  }
+  .reviews-list-name {
+    color: white;
+    font-size: 130%;
+  }
+  .reviews-list-date {
+    color: white;
+    /* float: right; */
+  }
+  .reviews-list-rating {
+    display: flex;
+    background-color: orange;
+    color: white;
+    font-size: 130%;
+    width: 80px;
+    border-radius: 10px;
+
+    padding: 10px;
+  }
+  .reviews-list-ratingDiv{
+    padding:  10px 0 0 10px;
+  }
+  .reviews-list-comments{
+    text-align: left;
+    padding: 10px;
+  }
+/* } */
+
 
 #reviews-list li p {
   margin: 0 0 10px;
@@ -387,4 +419,12 @@ nav h1 a {
 
 #reviews-list li {
   border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
 }
+
+/* #reviews-list.name  li p {
+  background-color: #333;
+  color: #f58500;
+
+} */
