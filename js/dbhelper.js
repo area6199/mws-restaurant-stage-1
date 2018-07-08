@@ -27,6 +27,8 @@ class DBHelper {
         const error = (`Request failed. Returned status of ${xhr.status}`);
         callback(error, null);
       }
+      // deactivates tabindex for map elements
+      selectMapElements();
     };
     xhr.send();
   }
@@ -156,16 +158,18 @@ class DBHelper {
   /**
    * Map marker for a restaurant.
    */
-   static mapMarkerForRestaurant(restaurant, map) {
+  static mapMarkerForRestaurant(restaurant, map) {
     // https://leafletjs.com/reference-1.3.0.html#marker  
-    const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
-      {title: restaurant.name,
+    const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng], {
+      title: restaurant.name,
       alt: restaurant.name,
       url: DBHelper.urlForRestaurant(restaurant)
-      })
-      marker.addTo(newMap);
+    })
+    marker.addTo(newMap);
+    // deactivates tabindex for markers
+    marker._icon.tabIndex = -1;
     return marker;
-  } 
+  }
   /* static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
@@ -178,4 +182,3 @@ class DBHelper {
   } */
 
 }
-
